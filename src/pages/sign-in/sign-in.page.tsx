@@ -14,9 +14,10 @@ import { Formik } from 'formik';
 import SignInSchema from './sign-in.schema';
 import http from '../../core/http/axios.config';
 import { useUser } from '../../core/contexts/user.context';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 const SignIn: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const { dark } = useTheme();
   const { setToken, setUser } = useUser();
   const navigation = useNavigation();
 
@@ -37,7 +38,11 @@ const SignIn: React.FC = () => {
             Bem vindo ao
           </Title>
           <Animatable.Image
-            source={require('../../assets/frwk.png')}
+            source={
+              dark
+                ? require('../../assets/frwk.png')
+                : require('../../assets/frwk_black.png')
+            }
             useNativeDriver
             delay={500}
             animation="fadeInLeft"

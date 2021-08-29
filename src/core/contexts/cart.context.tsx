@@ -16,11 +16,31 @@ const CartContextProvider: React.FC = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
 
   const addToCart = (product: Product) => {
-    setCart([...cart, product]);
+    if (cart.find(p => p.id === product.id)) {
+      setCart(
+        cart.map(cartItem =>
+          cartItem.id === product.id
+            ? { ...cartItem, qtd: Number(cartItem.qtd) + 1 }
+            : cartItem,
+        ),
+      );
+    } else {
+      setCart([...cart, { ...product, qtd: 1 }]);
+    }
   };
 
   const removeToCart = (product: Product) => {
-    setCart(cart.filter(item => item.id !== product.id));
+    if (cart.find(p => p.id === product.id && Number(p?.qtd) > 1)) {
+      setCart(
+        cart.map(cartItem =>
+          cartItem.id === product.id
+            ? { ...cartItem, qtd: Number(cartItem.qtd) - 1 }
+            : cartItem,
+        ),
+      );
+    } else {
+      setCart(cart.filter(item => item.id !== product.id));
+    }
   };
 
   const clearCart = () => {
