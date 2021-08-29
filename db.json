@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "name": "Hiago",
+      "picture": "https://instagram.fcpv12-1.fna.fbcdn.net/v/t51.2885-19/s150x150/109765951_692972351559433_5811503521538529816_n.jpg?_nc_ht=instagram.fcpv12-1.fna.fbcdn.net&_nc_ohc=kEjqNutdY7wAX-TDK58&edm=ABfd0MgBAAAA&ccb=7-4&oh=6e42b263bb0550018167c39045dfce31&oe=6131AFD6&_nc_sid=7bff83",
+      "email": "admin@admin.com",
+      "password": "$2a$10$S0a2/WkjE3mfqUGJkgBJ/eadAetAg53HgJnHYrI5cbsT3Omh8PHG.",
+      "id": 1
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "order": 1,
+      "name": "Manga",
+      "description": "Manga ajuda na imunidade 🦾",
+      "image": "https://www.pngkit.com/png/full/205-2054773_manga-imagens-de-manga-png.png",
+      "price": 3
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "name": "Maçã",
+      "description": "Maçã vitamina C 👌",
+      "image": "https://static.clubeextra.com.br/img/uploads/1/16/590016.png",
+      "price": 1
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "name": "Pêra",
+      "description": "Pêra faz bem para o coração ❤",
+      "image": "https://s.cornershopapp.com/product-images/2111020.png?versionId=ZTShMtxPkLN0f9t31wRkVCnCFRI.2Wv8",
+      "price": 1.5
+    },
+    {
+      "id": 4,
+      "order": 4,
+      "name": "Banana",
+      "description": "Banana melhora o humor 😁",
+      "image": "https://static1.conquistesuavida.com.br/ingredients/5/54/26/75/@/24677--ingredient_detail_ingredient-2.png",
+      "price": 0.5
+    },
+    {
+      "id": 5,
+      "order": 5,
+      "name": "Abacaxi",
+      "description": "Abacaxi melhora a digestão 💩",
+      "image": "https://lh3.googleusercontent.com/proxy/rw-23cdpSGVcLoV6mEL6TF-YdVX4CY7zY5dT9PumbpfHNKNLCbL3kZAyvlf-RU2PY7g9njIUtw5zSklH1siSdc5sJ6N9PRGTFVVx1vJrdnlQiADSJkV8zoiFK1UqSkYG6wSoWYUOo03u0IQle_s8LcjNfs6nBzqKBFBaO58RxJS7S96VMM-3jPxHnaL5Y0oxzl626Dgj0IjJGi8",
+      "price": 5
+    }
+  ]
+}
