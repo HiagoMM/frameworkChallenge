@@ -16,11 +16,22 @@ import {
 } from './cart.styles';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useSearchContext } from '../../core/contexts/search-bar.context';
+import { useEffect } from 'react';
 
 const Cart: React.FC = () => {
   const { cart, clearCart } = useCart();
+  const [filteredCart, setFilteredCart] = React.useState(cart);
+  const { search } = useSearchContext();
   const navigation = useNavigation();
   const theme = useTheme();
+
+  useEffect(() => {
+    setFilteredCart(
+      cart.filter(product => product.name.toLowerCase().includes(search)),
+    );
+  }, [cart, search]);
+
   const getTotal = () => {
     return cart.reduce((acc, cur) => acc + cur.price * Number(cur.qtd), 0) + 10;
   };
@@ -55,7 +66,7 @@ const Cart: React.FC = () => {
       ) : (
         <>
           <ItensContainer>
-            {cart.map((product, index) => (
+            {filteredCart.map((product, index) => (
               <View key={product.id}>
                 <CartCoupon {...product} />
                 {index + 1 !== cart.length && <Divider />}
