@@ -9,7 +9,8 @@ export const Container = styled.View`
 
 export const InsideContainer = styled.View`
   justify-content: space-evenly;
-  padding-bottom: 60px;
+
+  padding-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -28,13 +29,13 @@ export const StyledTextInput = styled(CustomTextInput)`
 `;
 
 export const Header = styled.View`
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 `;
 
 export const BottomFruits = styled(Animatable.Image)`
   position: absolute;
   width: 100%;
-  top: -40px;
+  top: -70px;
   right: 0;
   z-index: -1;
 `;

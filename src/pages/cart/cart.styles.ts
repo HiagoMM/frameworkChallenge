@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
 import { Button, Surface } from 'react-native-paper';
 import { Text } from 'react-native-paper';
+import * as Animatable from 'react-native-animatable';
 
-export const Container = styled.View`
+export const Container = styled(Animatable.View)`
   flex: 1;
   margin: 5%;
 `;
@@ -32,4 +33,14 @@ export const BuyButton = styled(Button)`
   height: 8%;
   align-items: center;
   justify-content: center;
+`;
+
+export const CartEmpty = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const TextEmptyCart = styled(Text)`
+  font-size: 40px;
 `;

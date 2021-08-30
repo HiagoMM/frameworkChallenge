@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="store"
+        name="products"
         component={Products}
         options={{
           tabBarLabel: 'Produtos',

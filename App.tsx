@@ -6,21 +6,25 @@ import UserContextProvider from './src/core/contexts/user.context';
 import { NavigationContainer } from '@react-navigation/native';
 import { ThemeConsumer } from 'styled-components/native';
 import SearchContextProvider from './src/core/contexts/search-bar.context';
+import { StatusBar } from 'react-native';
 
 const App = () => {
   return (
     <FRMKThemeProvider>
       <ThemeConsumer>
         {theme => (
-          <NavigationContainer theme={theme}>
-            <SearchContextProvider>
-              <UserContextProvider>
-                <CartContextProvider>
-                  <Routes />
-                </CartContextProvider>
-              </UserContextProvider>
-            </SearchContextProvider>
-          </NavigationContainer>
+          <>
+            <StatusBar backgroundColor={theme.colors.card} />
+            <NavigationContainer theme={theme}>
+              <SearchContextProvider>
+                <UserContextProvider>
+                  <CartContextProvider>
+                    <Routes />
+                  </CartContextProvider>
+                </UserContextProvider>
+              </SearchContextProvider>
+            </NavigationContainer>
+          </>
         )}
       </ThemeConsumer>
     </FRMKThemeProvider>
